@@ -9,30 +9,39 @@
 </head>
 <body>
     <div id="relatorioContainer">
-        <h1>Relatório de Solicitação de Material</h1>
+        <h1>Ordem de Solicitação de Materiais</h1>
+        <p>Grupo Partnership - Rio Verde/GO</p>
+        
         <form id="relatorioForm">
             <label for="setorSolicitante">Setor Solicitante:</label>
             <select id="setorSolicitante" name="setorSolicitante" required>
-                <option value="Setor A">Setor A</option>
-                <option value="Setor B">Setor B</option>
-                <option value="Setor C">Setor C</option>
+                <option value="Setor A">STC</option>
+                <option value="Setor B">OBRAS</option>
+                <option value="Setor C">MANUTENÇÃO</option>
             </select><br><br>
 
             <label for="solicitante">Solicitante:</label>
             <select id="solicitante" name="solicitante" required>
-                <option value="Solicitante 1">Solicitante 1</option>
-                <option value="Solicitante 2">Solicitante 2</option>
-                <option value="Solicitante 3">Solicitante 3</option>
+                <option value="Solicitante 1">MATRICULA-T54035WEUDES SIMOES GONTIJO - CARGO - PROGRAMADOR</option>
+                <option value="Solicitante 2">null</option>
+                <option value="Solicitante 3">null</option>
+                <option value="Solicitante 4">null</option>
+                <option value="Solicitante 5">null</option>
+                <option value="Solicitante 6">null</option>
+                <option value="Solicitante 7">null</option>
+                <option value="Solicitante 8">null</option>
+                <option value="Solicitante 9">null</option>
+                <option value="Solicitante 10">null</option>
             </select><br><br>
 
             <label for="responsavelAutorizacao">Responsável Autorização:</label>
             <select id="responsavelAutorizacao" name="responsavelAutorizacao" required>
-                <option value="Responsável 1">Responsável 1</option>
-                <option value="Responsável 2">Responsável 2</option>
-                <option value="Responsável 3">Responsável 3</option>
+                <option value="Responsável 1">null</option>
+                <option value="Responsável 2">null</option>
+                <option value="Responsável 3">null</option>
             </select><br><br>
 
-            <label for="dataSolicitacao">Data de Solicitação:</label>
+            <label for="dataSolicitacao">Data e Hora da Solicitação:</label>
             <input type="datetime-local" id="dataSolicitacao" name="dataSolicitacao" required pattern="\d{2}/\d{2}/\d{4} \d{2}:\d{2}"><br><br>
         </form>
         <h2>Materiais Solicitados</h2>
@@ -50,11 +59,12 @@
             </tbody>
         </table>
     </div>
-    <button onclick="voltarPesquisa()">Voltar à Pesquisa</button>
+    <button onclick="voltarPesquisa()">Continuar Lançando</button>
     <button onclick="limparRelatorio()">Limpar Relatório</button>
     <button onclick="baixarImagem()">Baixar Relatório em Imagem</button>
     <button onclick="reportarProblema()">Reportar Problema</button>
 
     <script src="relatorio.js"></script>
 </body>
+<p>copyright©tArnaldo de Sousa Lima todos os direitos reservados</p>
 </html>
