@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Cadastro</title>
+    <title>Sistema Solicitação de Marteriais</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <button onclick="mostrarSeção('cadastro')">Cadastro</button>
-        <button onclick="mostrarSeção('cadastros')">Cadastros</button>
-        <button onclick="mostrarSeção('pesquisa')">Pesquisa</button>
-        <button onclick="abrirRelatorio()">Relatório</button>
+        <button onclick="mostrarSeção('cadastros')">Base de Consulta</button>
+        <button onclick="mostrarSeção('pesquisa')">Prepara Ordem</button>
+        <button onclick="abrirRelatorio()">Ordem de Solicitação de Materiais</button>
     </nav>
 
     <section id="cadastro" class="seção">
-        <h1>Sistema de Cadastro</h1>
+        <h1>Sistema Solicitação de Marteriais</h1>
         <form id="cadastroForm">
-            <label for="refPesquisa">RefPesquisa:</label>
+            <label for="refPesquisa">Pesquisar:</label>
             <input type="text" id="refPesquisa" name="refPesquisa" required><br><br>
 
             <label for="codigo">Código:</label>
@@ -29,10 +29,10 @@
             <label for="quantidade">Quantidade:</label>
             <input type="number" id="quantidade" name="quantidade" required><br><br>
 
-            <label for="fase1">Fase 1:</label>
+            <label for="fase1">QTD.Classe-Tensão(kV-23,1):</label>
             <input type="text" id="fase1" name="fase1" required><br><br>
 
-            <label for="fase2">Fase 2:</label>
+            <label for="fase2">QTD.Classe-Tensão(kV-36,2):</label>
             <input type="text" id="fase2" name="fase2" required><br><br>
 
             <button type="button" onclick="cadastrar()">Cadastrar</button>
@@ -52,8 +52,8 @@
                     <th>Código</th>
                     <th>Descrição</th>
                     <th>Quantidade</th>
-                    <th>Fase 1</th>
-                    <th>Fase 2</th>
+                    <th>QTD.Classe-Tensão(kV-23,1)</th>
+                    <th>QTD.Classe-Tensão(kV-36,2)</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -67,9 +67,9 @@
         <form id="pesquisaForm">
             <label for="pesquisaRefPesquisa">RefPesquisa:</label>
             <input type="text" id="pesquisaRefPesquisa" name="pesquisaRefPesquisa" required>
-            <label for="fase1Checkbox">Fase 1:</label>
+            <label for="fase1Checkbox">QTD.Classe-Tensão(kV-23,1):</label>
             <input type="checkbox" id="fase1Checkbox" name="fase1Checkbox">
-            <label for="fase2Checkbox">Fase 2:</label>
+            <label for="fase2Checkbox">QTD.Classe-Tensão(kV-36,2):</label>
             <input type="checkbox" id="fase2Checkbox" name="fase2Checkbox">
             <button type="button" onclick="pesquisar()">Pesquisar</button>
         </form>
@@ -82,13 +82,13 @@
                     <th>Código</th>
                     <th>Descrição</th>
                     <th>Quantidade</th>
-                    <th>Fase</th>
+                    <th>QTD.Classe-Tensão(kV)</th>
                 </tr>
             </thead>
             <tbody>
             </tbody>
         </table>
-        <button type="button" onclick="gerarRelatorio()">Gerar Relatório</button>
+        <button type="button" onclick="gerarRelatorio()">Gerar Ordem</button>
     </section>
 
     <div id="notification" class="notification"></div>
@@ -96,4 +96,6 @@
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
 </body>
+<p>copyright©tArnaldo de Sousa Lima todos os direitos reservados</p>
+
 </html>
