@@ -4,6 +4,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    text-align: center; /* Adicionado para centralizar elementos */
 }
 
 nav {
@@ -21,6 +22,7 @@ nav button {
     font-size: 14px;
     cursor: pointer;
     font-family: 'Lucida Console', Monaco, monospace;
+    display: inline-block; /* Manter botões inline */
 }
 
 nav button:hover {
@@ -41,6 +43,7 @@ form {
     width: 80%;
     margin: 20px auto;
     box-shadow: 2px 2px 10px #bbb;
+    text-align: left; /* Manter texto alinhado à esquerda dentro do formulário */
 }
 
 form label {
@@ -60,6 +63,7 @@ form input[type="checkbox"] {
     border: 1px solid #ccc;
     border-radius: 3px;
     background-color: #f9f9f9;
+    text-transform: uppercase; /* Deixar os campos sempre em maiúscula */
 }
 
 form button {
@@ -71,6 +75,7 @@ form button {
     cursor: pointer;
     margin-top: 10px;
     font-family: 'Lucida Console', Monaco, monospace;
+    display: inline-block; /* Manter botões inline */
 }
 
 form button:hover {
@@ -109,6 +114,7 @@ button {
     cursor: pointer;
     margin: 10px;
     font-family: 'Lucida Console', Monaco, monospace;
+    display: inline-block; /* Manter botões inline */
 }
 
 button:hover {
@@ -125,6 +131,7 @@ input[type="text"],
 input[type="number"],
 input[type="date"] {
     font-family: 'Lucida Console', Monaco, monospace;
+    text-transform: uppercase; /* Deixar os campos sempre em maiúscula */
 }
 
 /* Notificação suave */
