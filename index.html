@@ -68,25 +68,25 @@
     </section>
 
     <section id="pesquisa" class="seção">
-        <h2>Pesquisar por RefPesquisa</h2>
+        <h2>Preparar Ordem de Solicitação</h2>
         <form id="pesquisaForm">
-            <label for="pesquisaRefPesquisa">RefPesquisa:</label>
+            <label for="pesquisaRefPesquisa">Pesquisar:</label>
             <input type="text" id="pesquisaRefPesquisa" name="pesquisaRefPesquisa" required>
             <label for="fase1Checkbox">QTD.Classe-Tensão(kV-23,1):</label>
             <input type="checkbox" id="fase1Checkbox" name="fase1Checkbox">
             <label for="fase2Checkbox">QTD.Classe-Tensão(kV-36,2):</label>
             <input type="checkbox" id="fase2Checkbox" name="fase2Checkbox">
-            <button type="button" onclick="pesquisar()">Pesquisar</button>
+            <button type="button" onclick="pesquisar()">Pesquisar🔎</button>
         </form>
 
-        <h2>Resultados da Pesquisa</h2>
+        <h2>Edição da Ordem de Solicitação</h2>
         <table id="resultadosTable">
             <thead>
                 <tr>
                     <th>RefPesquisa</th>
+                    <th>Item</th>
                     <th>Código</th>
-                    <th>Descrição</th>
-                    <th>Quantidade</th>
+                    <th>Descrição do Material</th>
                     <th>QTD.Classe-Tensão(kV)</th>
                 </tr>
             </thead>
