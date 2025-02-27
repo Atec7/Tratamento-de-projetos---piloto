@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Lucida Console', Monaco, monospace;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        form {
+            background-color: #e8e8e8;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px; /* Ajustei a largura do formulário */
+            margin: 20px auto;
+            box-shadow: 2px 2px 10px #bbb;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+            text-transform: uppercase;
+        }
+
+        form button {
+            background-color: #555;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-family: 'Lucida Console', Monaco, monospace;
+            display: inline-block;
+        }
+
+        form button:hover {
+            background-color: #333;
+        }
+
+        .progress-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 10px;
+            height: 20px;
+            margin: 10px 0;
+        }
+
+        .progress-bar div {
+            height: 100%;
+            width: 0%;
+            background-color: #4CAF50;
+            border-radius: 10px;
+        }
+
+        .footer {
+            font-size: 12px;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sistema Solicitação de Materiais</h1>
+    <p>Grupo Partnership - Rio Verde/GO</p>
+
+    <form id="loginForm">
+        <label for="username">Login:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <p id="progress-text">Aguarde...</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; Arnaldo de Sousa Lima - Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const progress = document.getElementById('progress');
+        const progressText = document.getElementById('progress-text');
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verificação de usuário e senha
+            if (username === "ARNALDO.LIMA" && password === "partner") {
+                // Exibe a barra de progresso
+                let progressValue = 0;
+                progress.style.width = progressValue + '%';
+
+                let interval = setInterval(function() {
+                    progressValue += 5; 
+                    progress.style.width = progressValue + '%';
+                    if (progressValue >= 100) {
+                        clearInterval(interval);
+                       
+                        window.location.href = 'index.html';
+                    }
+                }, 40); 
+            } else {
+                
+                progressText.textContent = "Usuário ou senha incorretos!";
+                progressText.style.backgroundColor = "#f44336"; // Cor de erro
+                progressText.style.color = "white";
+                progressText.style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+</html>
